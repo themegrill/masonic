@@ -1,24 +1,17 @@
-# Masonic WordPress Theme. Translation template file.
-# This file is distributed under the same license as the Masonic Theme.
+# Copyright (C) 2016 ThemeGrill
+# This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Masonic\n"
-"POT-Creation-Date: 2015-06-11 15:57+0545\n"
-"PO-Revision-Date: 2015-06-11 15:57+0545\n"
-"Last-Translator: \n"
-"Language-Team: ThemeGrill <themegrill@gmail.com>\n"
-"Language: en\n"
+"Project-Id-Version: Masonic 1.2.6\n"
+"Report-Msgid-Bugs-To: themegrill@gmail.com\n"
+"POT-Creation-Date: 2016-05-03 09:55:26+00:00\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7\n"
-"X-Poedit-Basepath: ..\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-SearchPath-0: .\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
 
 #: 404.php:17
 msgid "Oops! That page can&rsquo;t be found."
@@ -29,14 +22,6 @@ msgid ""
 "It looks like nothing was found at this location. Perhaps a search may help "
 "you."
 msgstr ""
-
-#: comments.php:29
-#, php-format
-msgctxt "comments title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
 
 #: comments.php:35 comments.php:53
 msgid "Comment navigation"
@@ -59,9 +44,7 @@ msgid "Nothing Found"
 msgstr ""
 
 #: content-none.php:19
-#, php-format
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
 #: content-none.php:23
@@ -108,25 +91,23 @@ msgstr ""
 msgid "Footer Sidebar Three"
 msgstr ""
 
-#: functions.php:218
+#: functions.php:223
 msgid "WordPress"
 msgstr ""
 
-#: functions.php:220
+#. Author of the plugin/theme
 msgid "ThemeGrill"
 msgstr ""
 
-#: functions.php:222
-#, php-format
+#: functions.php:227
 msgid "Powered by %s"
 msgstr ""
 
-#: functions.php:222
-#, php-format
+#: functions.php:227
 msgid "Theme: %2$s by %1$s"
 msgstr ""
 
-#: functions.php:263
+#: functions.php:268
 msgid "Video URL"
 msgstr ""
 
@@ -168,8 +149,8 @@ msgstr ""
 
 #: inc/customizer.php:138
 msgid ""
-"Check to enable the cropping of the featured image in the blog/archive page, "
-"ie, if unchecked, the height will not be cropped."
+"Check to enable the cropping of the featured image in the blog/archive "
+"page, ie, if unchecked, the height will not be cropped."
 msgstr ""
 
 #: inc/customizer.php:146
@@ -180,56 +161,43 @@ msgstr ""
 msgid "Add your custom css here and design live! (for advanced users)"
 msgstr ""
 
-#: inc/extras.php:56
-#, php-format
-msgid "Page %s"
-msgstr ""
-
-#: inc/extras.php:89
-#, php-format
+#: inc/extras.php:39
 msgid "Follow %s on Twitter"
 msgstr ""
 
-#: inc/extras.php:92
-#, php-format
+#: inc/extras.php:42
 msgid "Follow %s on Google+"
 msgstr ""
 
-#: inc/extras.php:95
-#, php-format
+#: inc/extras.php:45
 msgid "Follow %s on Facebook"
 msgstr ""
 
-#: inc/extras.php:118 inc/template-tags.php:145
-#, php-format
+#: inc/extras.php:68 inc/template-tags.php:164
 msgid "Author: %s"
 msgstr ""
 
-#: inc/extras.php:126 inc/template-tags.php:151
-#, php-format
+#: inc/extras.php:76 inc/template-tags.php:170
 msgid "Day: %s"
 msgstr ""
 
-#: inc/extras.php:129 inc/template-tags.php:149
-#, php-format
+#: inc/extras.php:79 inc/template-tags.php:168
 msgid "Month: %s"
 msgstr ""
 
-#: inc/extras.php:132 inc/template-tags.php:147
-#, php-format
+#: inc/extras.php:82 inc/template-tags.php:166
 msgid "Year: %s"
 msgstr ""
 
-#: inc/extras.php:135 inc/template-tags.php:159 sidebar.php:18
+#: inc/extras.php:85 inc/template-tags.php:178 sidebar.php:18
 msgid "Archives"
 msgstr ""
 
-#: inc/extras.php:140
+#: inc/extras.php:90
 msgid "404: Page Not Found"
 msgstr ""
 
-#: inc/extras.php:142
-#, php-format
+#: inc/extras.php:92
 msgid "Search Results For: %s"
 msgstr ""
 
@@ -237,94 +205,70 @@ msgstr ""
 msgid "Posts navigation"
 msgstr ""
 
-#: inc/template-tags.php:28
+#: inc/template-tags.php:32
 msgid "<span><i class=\"fa fa-arrow-circle-o-left\"></i></span> Older posts"
 msgstr ""
 
-#: inc/template-tags.php:32
+#: inc/template-tags.php:36
 msgid "Newer posts <span><i class=\"fa fa-arrow-circle-o-right\"></i></span>"
 msgstr ""
 
-#: inc/template-tags.php:36
+#: inc/template-tags.php:40
 msgid "<span><i class=\"fa fa-arrow-circle-o-left\"></i></span> Previous"
 msgstr ""
 
-#: inc/template-tags.php:40
+#: inc/template-tags.php:44
 msgid "Next <span><i class=\"fa fa-arrow-circle-o-right\"></i></span>"
 msgstr ""
 
-#: inc/template-tags.php:69
+#: inc/template-tags.php:74
 msgid "Post navigation"
 msgstr ""
 
-#: inc/template-tags.php:71
-msgctxt "Previous post link"
-msgid "<span><i class=\"fa fa-arrow-circle-o-left\"></i></span>%title"
-msgstr ""
-
-#: inc/template-tags.php:72
-msgctxt "Next post link"
-msgid "%title<span><i class=\"fa fa-arrow-circle-o-right\"></i></span>"
-msgstr ""
-
-#: inc/template-tags.php:90
+#: inc/template-tags.php:95
 msgid " "
 msgstr ""
 
-#: inc/template-tags.php:101 inc/template-tags.php:115
+#: inc/template-tags.php:111
+msgid ""
+"<div class=\"entry-date fa fa-clock-o\"><a href=\"%1$s\" title=\"%2$s\" "
+"rel=\"bookmark\">%3$s</a></div>"
+msgstr ""
+
+#: inc/template-tags.php:120 inc/template-tags.php:134
 msgid ", "
 msgstr ""
 
-#: inc/template-tags.php:110
+#: inc/template-tags.php:129
 msgid "No Comment"
 msgstr ""
 
-#: inc/template-tags.php:110
+#: inc/template-tags.php:129
 msgid "1 Comment"
 msgstr ""
 
-#: inc/template-tags.php:110
+#: inc/template-tags.php:129
 msgid "% Comments"
 msgstr ""
 
-#: inc/template-tags.php:119
-#, php-format
+#: inc/template-tags.php:138
 msgid " %1$s"
 msgstr ""
 
-#: inc/template-tags.php:141
-#, php-format
+#: inc/template-tags.php:160
 msgid "Category: %s"
 msgstr ""
 
-#: inc/template-tags.php:143
-#, php-format
+#: inc/template-tags.php:162
 msgid "Tag: %s"
 msgstr ""
 
-#: inc/template-tags.php:147
-msgctxt "yearly archives date format"
-msgid "Y"
-msgstr ""
-
-#: inc/template-tags.php:149
-msgctxt "monthly archives date format"
-msgid "F Y"
-msgstr ""
-
-#: inc/template-tags.php:151
-msgctxt "daily archives date format"
-msgid "F j, Y"
-msgstr ""
-
-#: inc/template-tags.php:153
-#, php-format
+#: inc/template-tags.php:172
 msgid "Archives: %s"
 msgstr ""
 
+#: inc/template-tags.php:176
 #. translators: 1: Taxonomy singular name, 2: Current taxonomy term
-#: inc/template-tags.php:157
-#, php-format
 msgid "%1$s: %2$s"
 msgstr ""
 
@@ -338,4 +282,58 @@ msgstr ""
 
 #: sidebar.php:25
 msgid "Meta"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Masonic"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://themegrill.com/themes/masonic/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Masonic is responsive and retina ready WordPress theme suitable for blogs "
+"and has beautiful masonry layout. Theme has options like primary color, "
+"link color, custom CSS etc. which you can change from Theme Customizer. "
+"Also, supports Breadcrumb NavXT plugin. Get free support at "
+"http://themegrill.com/support-forum/ and check the demo at "
+"http://demo.themegrill.com/masonic/"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://themegrill.com"
+msgstr ""
+
+#: comments.php:29
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/template-tags.php:76
+msgctxt "Previous post link"
+msgid "<span><i class=\"fa fa-arrow-circle-o-left\"></i></span>%title"
+msgstr ""
+
+#: inc/template-tags.php:77
+msgctxt "Next post link"
+msgid "%title<span><i class=\"fa fa-arrow-circle-o-right\"></i></span>"
+msgstr ""
+
+#: inc/template-tags.php:166
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: inc/template-tags.php:168
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: inc/template-tags.php:170
+msgctxt "daily archives date format"
+msgid "F j, Y"
 msgstr ""
