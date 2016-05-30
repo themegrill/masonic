@@ -351,3 +351,14 @@ require get_template_directory() . '/inc/customizer.php';
  * Post Formats additions.
  */
 require get_template_directory() . '/inc/post-formats.php';
+
+/**
+ * Assign the Masonic version to a variable.
+ */
+$theme            = wp_get_theme( 'masonic' );
+$masonic_version = $theme['Version'];
+
+/* Calling in the admin area for the Welcome Page */
+if ( is_admin() ) {
+	require get_template_directory() . '/inc/admin/class-masonic-admin.php';
+}

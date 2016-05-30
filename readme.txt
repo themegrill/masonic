@@ -42,7 +42,7 @@ and we will include it within the theme from next version update.
 
 /**********************************************************/
 
-== CHANGE LOG ==
+== Changelog ==
 = Version 1.2.6 =
 * Updated FontAwesome icons to version 4.5.0
 * Removed backward compatibility for WordPress title tag
