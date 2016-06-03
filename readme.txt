@@ -43,6 +43,10 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Tweaks - Updated theme tags as per new introduced tags.
+* Tweaks - Introduced welcome page for theme.
+
 = Version 1.2.6 =
 * Updated FontAwesome icons to version 4.5.0
 * Removed backward compatibility for WordPress title tag
