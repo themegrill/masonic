@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Masonic 1.2.6\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2016-05-03 09:55:26+00:00\n"
+"POT-Creation-Date: 2016-06-29 06:50:00+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -113,6 +113,144 @@ msgstr ""
 
 #: header.php:24
 msgid "Skip to content"
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:36 inc/admin/class-masonic-admin.php:115
+msgid "About"
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:74
+msgid "Action failed. Please refresh the page and retry."
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:78
+msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:92
+msgid "Dismiss"
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:93
+msgid ""
+"Welcome! Thank you for choosing masonic! To fully take advantage of the "
+"best our theme can offer please make sure you visit our %swelcome page%s."
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:95
+msgid "Get started with Masonic"
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:117
+msgid "%s"
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:130
+msgid "Theme Info"
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:132
+msgid "View Demo"
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:134
+msgid "Rate this theme"
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:142
+msgid "Supported Plugins"
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:145
+msgid "Changelog"
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:179
+msgid "Theme Customizer"
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:180
+msgid "All Theme Options are available via Customize screen."
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:181
+msgid "Customize"
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:185 inc/admin/class-masonic-admin.php:187
+msgid "Documentation"
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:186
+msgid "Please view our documentation page to setup the theme."
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:191
+msgid "Got theme support question?"
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:192
+msgid "Please put it in our dedicated support forum."
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:193
+msgid "Support"
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:199 inc/admin/class-masonic-admin.php:207
+msgid "Translate"
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:203
+msgid "Click below to translate this theme into your own language."
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:219
+msgid "Return to Updates"
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:219
+msgid "Return to Dashboard &rarr; Updates"
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:222
+msgid "Go to Dashboard &rarr; Home"
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:222
+msgid "Go to Dashboard"
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:239
+msgid "View changelog below."
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:292
+msgid "This theme recommends following plugins:"
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:294
+msgid "Social Icons"
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:295 inc/admin/class-masonic-admin.php:298
+msgid " by ThemeGrill"
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:297
+msgid "Easy Social Sharing"
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:300
+msgid "Contact Form 7"
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:301
+msgid "WP-PageNavi"
+msgstr ""
+
+#: inc/admin/class-masonic-admin.php:302
+msgid "Breadcrumb NavXT"
 msgstr ""
 
 #: inc/custom-header.php:35
