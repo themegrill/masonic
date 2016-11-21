@@ -88,17 +88,20 @@ function masonic_register_theme_customizer($wp_customize) {
        'description' => __( 'Upload Your Logo Here', 'masonic' ),
    ));
 
-   $wp_customize->add_setting('masonic_logo', array
-       ('default' => '',
-       'capability' => 'edit_theme_options',
-       'sanitize_callback' => 'esc_url_raw'
+   if ( !function_exists('the_custom_logo') || ( get_theme_mod('masonic_logo', '') != '' ) ) {
+   $wp_customize->add_setting('masonic_logo', array(
+     'default' => '',
+     'capability' => 'edit_theme_options',
+     'sanitize_callback' => 'esc_url_raw'
    ));
 
    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'masonic_logo', array(
-       'label' => __('Logo', 'masonic'),
-       'section' => 'masonic_logo_section',
-       'settings' => 'masonic_logo',
+     'label' => __('Upload logo for your header.', 'freedom'),
+     'description' => __( '<strong>Info:</strong> This option will be removed in upcoming update. Please go to Site Identity section to upload the theme logo.', 'masonic' ),
+     'section' => 'masonic_logo_section',
+     'setting' => 'masonic_logo'
    )));
+   }
 
    // search icon enable/disable
    $wp_customize->add_section('masonic_search_icon_display_section', array(

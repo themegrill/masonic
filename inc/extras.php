@@ -102,4 +102,16 @@ if (!function_exists('masonic_header_title')) :
    }
 
 endif;
+
+// Displays the site logo
+if ( ! function_exists( 'masonic_the_custom_logo' ) ) {
+  /**
+   * Displays the optional custom logo.
+   */
+  function masonic_the_custom_logo() {
+    if ( function_exists( 'the_custom_logo' )  && ( get_theme_mod( 'masonic_logo','' ) == '') ) {
+      the_custom_logo();
+    }
+  }
+}
 ?>
