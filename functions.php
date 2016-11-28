@@ -328,6 +328,29 @@ function masonic_meta_box_display_toggle() {
 add_action( 'admin_footer', 'masonic_meta_box_display_toggle' );
 
 /**
+  * Migrate any existing theme CSS codes added in Customize Options to the core option added in WordPress 4.7
+  */
+ function masonic_customm_css_migrate() {
+   if ( get_option( 'masonic_custom_css_transfer' ) ) {
+     return;
+   }
+ 
+   $theme_custom_css = get_theme_mod( 'masonic_custom_css', '' );
+   if ( ! empty( $theme_custom_css ) && function_exists( 'wp_update_custom_css_post' ) ) {
+     $wordpress_core_css = wp_get_custom_css(); // Preserve any CSS already added to the core option.
+     $return = wp_update_custom_css_post( $wordpress_core_css . $theme_custom_css );
+     if ( ! is_wp_error( $return ) ) {
+       // Set the transfer as complete
+       update_option( 'masonic_custom_css_transfer', 1 );
+       // Remove the old theme_mod option for the Custom CSS Box provided via theme
+       remove_theme_mod( 'masonic_custom_css' );
+     }
+   }
+ }
+ 
+ add_action( 'after_setup_theme', 'masonic_customm_css_migrate' );
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
@@ -362,3 +385,4 @@ $masonic_version = $theme['Version'];
 if ( is_admin() ) {
 	require get_template_directory() . '/inc/admin/class-masonic-admin.php';
 }
+
