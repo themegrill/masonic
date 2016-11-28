@@ -119,6 +119,30 @@ function masonic_register_theme_customizer($wp_customize) {
       'section' => 'masonic_search_icon_display_section',
       'settings' => 'masonic_search_icon_display'
    ));
+   // New Responsive Menu
+   $wp_customize->add_panel('masonic_responsive_menu_panel',array(
+    'capability' => 'edit_theme_options',
+    'description' => __('Contains responsive menu options'),
+    'priority' => 300,
+    'title' => __('Masonic Responsive Menu Options','masonic')
+    ));
+   $wp_customize->add_section('masonic_new_menu_style', array(
+       'priority' => 3,
+       'title' => esc_html__('Responsive Menu Style', 'masonic'),
+       'panel' => 'masonic_responsive_menu_panel'
+    ));
+    $wp_customize->add_setting('masonic_new_menu', array(
+       'default' => 0,
+       'type' => 'option',
+       'capability' => 'edit_theme_options',
+       'sanitize_callback' => 'masonic_checkbox_sanitize'
+    ));
+    $wp_customize->add_control('masonic_new_menu', array(
+       'type' => 'checkbox',
+       'label' => esc_html__('Switch to new responsive menu', 'masonic'),
+       'section' => 'masonic_new_menu_style',
+       'settings' => 'masonic_new_menu'
+    ));
 
    // small featured image cropping in height enable/disable
    $wp_customize->add_section('masonic_featured_image_cropping_section', array(
