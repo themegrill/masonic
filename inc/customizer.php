@@ -133,7 +133,6 @@ function masonic_register_theme_customizer($wp_customize) {
     ));
     $wp_customize->add_setting('masonic_new_menu', array(
        'default' => 0,
-       'type' => 'option',
        'capability' => 'edit_theme_options',
        'sanitize_callback' => 'masonic_checkbox_sanitize'
     ));
