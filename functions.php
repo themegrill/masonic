@@ -44,6 +44,11 @@ if (!function_exists('masonic_setup')) :
        */
       add_theme_support('title-tag');
 
+      // Adds the support for the Custom Logo introduced in WordPress 4.5
+      add_theme_support( 'custom-logo', array(
+          'flex-width' => true,
+          'flex-height' => true,
+      ));
       /*
        * Enable support for Post Thumbnails on posts and pages.
        *

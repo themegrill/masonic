@@ -35,11 +35,17 @@
 
             <div class="site-branding clear">
                <div class="wrapper site-header-text clear">
-                  <?php if (get_theme_mod('masonic_logo')) : ?>
+                  
                      <div class="logo-img-holder " >
+                        <?php if ( get_theme_mod('masonic_logo', '') != '') { ?>
                         <a  href='<?php echo esc_url(home_url('/')); ?>' title='<?php echo esc_attr(get_bloginfo('name', 'masonic')); ?>' rel='home'><img src='<?php echo esc_url(get_theme_mod('masonic_logo')); ?>' alt='<?php echo esc_attr(get_bloginfo('name', 'masonic')); ?>'></a>
+                     <?php } ?>
+
+                     <?php if (function_exists('the_custom_logo') && has_custom_logo( $blog_id = 0 )) {
+                        masonic_the_custom_logo();
+                     } ?>
                      </div>
-                  <?php endif; ?>
+                  
                   <div class="main-header">
                   <?php if ( is_front_page() || is_home() ) : ?>
                      <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
