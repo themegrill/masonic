@@ -147,10 +147,25 @@ remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 add_filter( 'woocommerce_show_page_title', '__return_false' );
 
 add_action('woocommerce_before_main_content', 'masonic_wrapper_start', 10);
+add_action('woocommerce_before_main_content', 'masonic_inner_wrapper_start', 10);
+add_action('woocommerce_after_main_content', 'masonic_inner_wrapper_end', 10);
 add_action('woocommerce_after_main_content', 'masonic_wrapper_end', 10);
 
 function masonic_wrapper_start() {
 	echo '<div class="site-content"><div id="container" class="wrapper clear">';
+}
+
+function masonic_inner_wrapper_start() {
+	if ( is_single() || is_page() ) {
+		echo '<div class="primary">';
+	}
+}
+
+function masonic_inner_wrapper_end() {
+	if ( is_single() || is_page() ) {
+		echo '</div>';
+		get_sidebar();
+	}
 }
 
 function masonic_wrapper_end() {
