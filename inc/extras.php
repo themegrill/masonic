@@ -133,3 +133,37 @@ function masonic_site_logo_migrate() {
 }
 
 add_action( 'after_setup_theme', 'masonic_site_logo_migrate' );
+
+/**************************************************************************************/
+
+/**
+ * Making the theme Woocommrece compatible
+ */
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+
+add_filter( 'woocommerce_show_page_title', '__return_false' );
+
+add_action('woocommerce_before_main_content', 'masonic_wrapper_start', 10);
+add_action('woocommerce_before_main_content', 'masonic_inner_wrapper_start', 15);
+add_action('woocommerce_after_main_content', 'masonic_inner_wrapper_end', 10);
+add_action('woocommerce_sidebar', 'masonic_wrapper_end', 20);
+
+function masonic_wrapper_start() {
+   echo '<div class="site-content clear"> <div id="container" class="wrapper clear">';
+}
+
+function masonic_inner_wrapper_start() {
+   echo '<div id="primary">';
+}
+
+function masonic_inner_wrapper_end() {
+   echo '</div>';
+}
+
+function masonic_wrapper_end() {
+   get_sidebar();
+   echo '</div></div>';
+}
