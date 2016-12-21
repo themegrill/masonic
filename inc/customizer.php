@@ -88,7 +88,7 @@ function masonic_register_theme_customizer($wp_customize) {
        'description' => __( 'Upload Your Logo Here', 'masonic' ),
    ));
 
-	if ( !function_exists('the_custom_logo') || ( get_theme_mod('masonic_logo', '') != '' ) ) {
+	if ( ! function_exists('the_custom_logo') ) {
 		$wp_customize->add_setting('masonic_logo', array(
 		'default' => '',
 		'capability' => 'edit_theme_options',
