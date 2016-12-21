@@ -31,20 +31,7 @@ add_action('customize_preview_init', 'masonic_customize_preview_js');
 
 function masonic_register_theme_customizer($wp_customize) {
 
-   class MASONIC_ADDITIONAL_Control extends WP_Customize_Control {
 
-      public $type = 'textarea';
-
-      public function render_content() {
-         ?>
-         <label>
-            <span class="customize-control-title"><?php echo esc_html($this->label); ?></span>
-            <textarea rows="5" style="width:100%;" <?php $this->link(); ?>><?php echo esc_textarea($this->value()); ?></textarea>
-         </label>
-         <?php
-      }
-
-   }
 
    // masonic color options
    $masonic_colors = array('masonic_primary_color' => array(
@@ -88,17 +75,20 @@ function masonic_register_theme_customizer($wp_customize) {
        'description' => __( 'Upload Your Logo Here', 'masonic' ),
    ));
 
-   $wp_customize->add_setting('masonic_logo', array
-       ('default' => '',
-       'capability' => 'edit_theme_options',
-       'sanitize_callback' => 'esc_url_raw'
-   ));
+	if ( ! function_exists('the_custom_logo') ) {
+		$wp_customize->add_setting('masonic_logo', array(
+		'default' => '',
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'esc_url_raw'
+		));
 
-   $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'masonic_logo', array(
-       'label' => __('Logo', 'masonic'),
-       'section' => 'masonic_logo_section',
-       'settings' => 'masonic_logo',
-   )));
+		$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'masonic_logo', array(
+		'label' => __('Logo', 'masonic'),
+		'description' => sprintf(__( '%sInfo:%s This option will be removed in upcoming update. Please go to Site Identity section to upload the theme logo.', 'masonic' ), '<strong>', '</strong>'),
+		'section' => 'masonic_logo_section',
+		'setting' => 'masonic_logo'
+		)));
+	}
 
    // search icon enable/disable
    $wp_customize->add_section('masonic_search_icon_display_section', array(
@@ -157,31 +147,46 @@ function masonic_register_theme_customizer($wp_customize) {
    ));
 
    // masonic custom css options
-   $wp_customize->add_section(
-           'masonic_custom_css_section', array(
-       'title' => __('Custom CSS', 'masonic'),
-       'priority' => 200
-           )
-   );
+   if ( ! function_exists( 'wp_update_custom_css_post' ) ) {
+		class MASONIC_ADDITIONAL_Control extends WP_Customize_Control {
 
-   $wp_customize->add_setting(
-           'masonic_custom_css', array(
-       'default' => '',
-       'capability' => 'edit_theme_options',
-       'sanitize_callback' => 'wp_filter_nohtml_kses',
-       'sanitize_js_callback' => 'wp_filter_nohtml_kses'
-           )
-   );
+		public $type = 'textarea';
 
-   $wp_customize->add_control(
-           new MASONIC_ADDITIONAL_Control(
-           $wp_customize, 'masonic_custom_css', array(
-       'label' => __('Add your custom css here and design live! (for advanced users)', 'masonic'),
-       'section' => 'masonic_custom_css_section',
-       'settings' => 'masonic_custom_css'
-           )
-           )
-   );
+		public function render_content() {
+		 ?>
+		 <label>
+		    <span class="customize-control-title"><?php echo esc_html($this->label); ?></span>
+		    <textarea rows="5" style="width:100%;" <?php $this->link(); ?>><?php echo esc_textarea($this->value()); ?></textarea>
+		 </label>
+		 <?php
+		}
+
+   		}
+		$wp_customize->add_section(
+			'masonic_custom_css_section', array(
+			'title' => __('Custom CSS', 'masonic'),
+			'priority' => 200
+			)
+		);
+
+		$wp_customize->add_setting(
+			'masonic_custom_css', array(
+			'default' => '',
+			'capability' => 'edit_theme_options',
+			'sanitize_callback' => 'wp_filter_nohtml_kses',
+			'sanitize_js_callback' => 'wp_filter_nohtml_kses'
+			)
+		);
+
+		$wp_customize->add_control(
+		new MASONIC_ADDITIONAL_Control(
+			$wp_customize, 'masonic_custom_css', array(
+			'label' => __('Add your custom css here and design live! (for advanced users)', 'masonic'),
+			'section' => 'masonic_custom_css_section',
+			'settings' => 'masonic_custom_css'
+			) )
+		);
+	}
 
    function masonic_sanitize_hex_color($color) {
       if ($unhashed = sanitize_hex_color_no_hash($color))
@@ -248,7 +253,7 @@ function masonic_customizer_css() {
    ?>
    <style type="text/css"><?php echo $customizer_css; ?></style>
    <?php
-   if (get_theme_mod('masonic_custom_css')) {
+   if (get_theme_mod('masonic_custom_css') && ! function_exists( 'wp_update_custom_css_post' ) ) {
       $customizer_css .= get_theme_mod('masonic_custom_css');
       echo "<style type=\"text/css\">{$customizer_css}</style>";
    }
