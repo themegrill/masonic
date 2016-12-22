@@ -20,6 +20,9 @@ function masonic_body_classes($classes) {
    if (is_multi_author()) {
       $classes[] = 'group-blog';
    }
+    if( get_theme_mod( 'masonic_new_menu', '0' ) == 1 ){
+      $classes[] = 'better-responsive-menu';
+   }
 
    return $classes;
 }
