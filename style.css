@@ -1381,6 +1381,10 @@ footer .angled-background {
 .woocommerce .star-rating span {
     font-family: star;
 }
+
+nav.woocommerce-pagination ul li a {
+    color: #333;
+}
 /*--------------------------------------------------------------
 13.0 Responsive
 --------------------------------------------------------------*/
