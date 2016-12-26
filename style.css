@@ -1376,6 +1376,11 @@ footer .angled-background {
 .wp-pagenavi a, .wp-pagenavi span {
   border: 1px solid #ffc800;
 }
+
+/* WooCommerce */
+.woocommerce .star-rating span {
+    font-family: star;
+}
 /*--------------------------------------------------------------
 13.0 Responsive
 --------------------------------------------------------------*/
