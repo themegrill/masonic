@@ -25,17 +25,18 @@
 
          <header id="masthead" class="site-header clear">
 
-            <div class="header-image">
-            	<?php if ( function_exists('the_custom_header_markup') ) {
+			<div class="header-image">
+				<?php if ( function_exists('the_custom_header_markup') ) {
+					do_action( 'masonic_header_image_markup_render' );
 					the_custom_header_markup();
 				} else {
 					if (get_header_image()) : ?>
-                  		<figure><img src="<?php header_image(); ?>" width="<?php echo esc_attr(get_custom_header()->width); ?>" height="<?php echo esc_attr(get_custom_header()->height); ?>" alt="">
-                     	<div class="angled-background"></div>
-                  		</figure>
-            		<?php endif; // End header image check.
-        		} ?>
-            </div> <!-- .header-image -->
+						<figure><img src="<?php header_image(); ?>" width="<?php echo esc_attr(get_custom_header()->width); ?>" height="<?php echo esc_attr(get_custom_header()->height); ?>" alt="">
+							<div class="angled-background"></div>
+						</figure>
+					<?php endif; // End header image check.
+				} ?>
+			</div> <!-- .header-image -->
 
             <div class="site-branding clear">
                <div class="wrapper site-header-text clear">

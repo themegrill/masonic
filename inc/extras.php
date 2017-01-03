@@ -192,3 +192,21 @@ function masonic_inner_wrapper_end() {
 function masonic_wrapper_end() {
 	echo '</div></div>';
 }
+
+/****************************************************************************************/
+// Filter the get_header_image_tag() for supporting the older way of displaying the header image
+function masonic_header_image_markup( $html, $header, $attr ) {
+	$output = '';
+
+	if ( get_header_image() ) {
+		$output .= '<figure><img src="' . get_header_image() . '" width="' . esc_attr(get_custom_header()->width) . '" height="' . esc_attr(get_custom_header()->height) . '" alt="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '"><div class="angled-background"></div></figure>';
+	}
+
+	return $output;
+}
+
+function masonic_header_image_markup_filter() {
+	add_filter( 'get_header_image_tag', 'masonic_header_image_markup', 10, 3 );
+}
+
+add_action( 'masonic_header_image_markup_render','masonic_header_image_markup_filter' );
