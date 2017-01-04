@@ -43,6 +43,8 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= TBD =
+* Tweaks - Remove unrequired function the_archive_title and the_archive_description as it is bundled in WordPress since 4.1
 
 = Version 1.2.8 - 2016-12-26 =
 * Feature - Added the Custom Site Logo feature introduced in WordPress 4.5
