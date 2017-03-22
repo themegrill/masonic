@@ -127,9 +127,9 @@ class Masonic_Admin {
 		</div>
 
 		<p class="masonic-actions">
-			<a href="<?php echo esc_url( 'http://themegrill.com/themes/masonic/' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Theme Info', 'masonic' ); ?></a>
+			<a href="<?php echo esc_url( 'https://themegrill.com/themes/masonic/' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Theme Info', 'masonic' ); ?></a>
 
-			<a href="<?php echo esc_url( apply_filters( 'masonic_pro_theme_url', 'http://demo.themegrill.com/masonic/' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Demo', 'masonic' ); ?></a>
+			<a href="<?php echo esc_url( apply_filters( 'masonic_pro_theme_url', 'https://demo.themegrill.com/masonic/' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Demo', 'masonic' ); ?></a>
 
 			<a href="<?php echo esc_url( apply_filters( 'masonic_pro_theme_url', 'http://wordpress.org/support/view/theme-reviews/masonic?filter=5' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'Rate this theme', 'masonic' ); ?></a>
 		</p>
@@ -184,13 +184,13 @@ class Masonic_Admin {
 					<div class="col">
 						<h3><?php esc_html_e( 'Documentation', 'masonic' ); ?></h3>
 						<p><?php esc_html_e( 'Please view our documentation page to setup the theme.', 'masonic' ) ?></p>
-						<p><a href="<?php echo esc_url( 'http://themegrill.com/theme-instruction/masonic/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Documentation', 'masonic' ); ?></a></p>
+						<p><a href="<?php echo esc_url( 'https://themegrill.com/theme-instruction/masonic/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Documentation', 'masonic' ); ?></a></p>
 					</div>
 
 					<div class="col">
 						<h3><?php esc_html_e( 'Got theme support question?', 'masonic' ); ?></h3>
 						<p><?php esc_html_e( 'Please put it in our dedicated support forum.', 'masonic' ) ?></p>
-						<p><a href="<?php echo esc_url( 'http://themegrill.com/support-forum/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Support', 'masonic' ); ?></a></p>
+						<p><a href="<?php echo esc_url( 'https://themegrill.com/support-forum/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Support', 'masonic' ); ?></a></p>
 					</div>
 
 					<div class="col">

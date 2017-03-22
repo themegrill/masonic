@@ -6,9 +6,8 @@
  * @subpackage Masonic
  * @since 1.0
  */
-?>
 
-<?php get_header(); ?>
+get_header(); ?>
 
 <div class="site-content">
    <div id="container" class="wrapper clear">

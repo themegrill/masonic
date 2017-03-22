@@ -427,7 +427,7 @@ msgid "Masonic"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://themegrill.com/themes/masonic/"
+msgid "https://themegrill.com/themes/masonic/"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -436,12 +436,12 @@ msgid ""
 "and has beautiful masonry layout. Theme has options like primary color, "
 "link color, custom CSS etc. which you can change from Theme Customizer. "
 "Also, supports Breadcrumb NavXT plugin. Get free support at "
-"http://themegrill.com/support-forum/ and check the demo at "
-"http://demo.themegrill.com/masonic/"
+"https://themegrill.com/support-forum/ and check the demo at "
+"https://demo.themegrill.com/masonic/"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://themegrill.com"
+msgid "https://themegrill.com"
 msgstr ""
 
 #: comments.php:29
