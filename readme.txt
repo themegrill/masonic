@@ -43,7 +43,7 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-= TBD =
+= Version 1.2.9 - 2017-05-01 =
 * Tweaks - Remove unrequired function the_archive_title and the_archive_description as it is bundled in WordPress since 4.1
 * Feature - Added theme support for WooCommerce 3.0 product gallery.
 

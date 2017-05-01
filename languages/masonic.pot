@@ -1,23 +1,23 @@
-# Copyright (C) 2016 ThemeGrill
+# Copyright (C) 2017 ThemeGrill
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Masonic 1.2.6\n"
+"Project-Id-Version: Masonic 1.2.9\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2016-06-29 06:50:00+00:00\n"
+"POT-Creation-Date: 2017-05-01 11:09:20+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
 
-#: 404.php:17
+#: 404.php:16
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: 404.php:19
+#: 404.php:18
 msgid ""
 "It looks like nothing was found at this location. Perhaps a search may help "
 "you."
@@ -71,27 +71,27 @@ msgstr ""
 msgid "&copy; "
 msgstr ""
 
-#: functions.php:62
+#: functions.php:74
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:98
+#: functions.php:110
 msgid "Right Sidebar"
 msgstr ""
 
-#: functions.php:107
+#: functions.php:119
 msgid "Footer Sidebar One"
 msgstr ""
 
-#: functions.php:116
+#: functions.php:128
 msgid "Footer Sidebar Two"
 msgstr ""
 
-#: functions.php:125
+#: functions.php:137
 msgid "Footer Sidebar Three"
 msgstr ""
 
-#: functions.php:223
+#: functions.php:233
 msgid "WordPress"
 msgstr ""
 
@@ -99,15 +99,15 @@ msgstr ""
 msgid "ThemeGrill"
 msgstr ""
 
-#: functions.php:227
+#: functions.php:237
 msgid "Powered by %s"
 msgstr ""
 
-#: functions.php:227
+#: functions.php:237
 msgid "Theme: %2$s by %1$s"
 msgstr ""
 
-#: functions.php:268
+#: functions.php:278
 msgid "Video URL"
 msgstr ""
 
@@ -257,45 +257,51 @@ msgstr ""
 msgid "Header Image"
 msgstr ""
 
-#: inc/customizer.php:53
+#: inc/customizer.php:40
 msgid "Primary Color"
 msgstr ""
 
-#: inc/customizer.php:58
+#: inc/customizer.php:45
 msgid "Link Color"
 msgstr ""
 
-#: inc/customizer.php:86 inc/customizer.php:98
+#: inc/customizer.php:73 inc/customizer.php:86
 msgid "Logo"
 msgstr ""
 
-#: inc/customizer.php:88
+#: inc/customizer.php:75
 msgid "Upload Your Logo Here"
 msgstr ""
 
-#: inc/customizer.php:105
+#: inc/customizer.php:87
+msgid ""
+"%sInfo:%s This option will be removed in upcoming update. Please go to Site "
+"Identity section to upload the theme logo."
+msgstr ""
+
+#: inc/customizer.php:95
 msgid "Search Icon"
 msgstr ""
 
-#: inc/customizer.php:118
+#: inc/customizer.php:108
 msgid "Check to enable the search icon in menu."
 msgstr ""
 
-#: inc/customizer.php:125
+#: inc/customizer.php:115
 msgid "Featured Image Cropping"
 msgstr ""
 
-#: inc/customizer.php:138
+#: inc/customizer.php:128
 msgid ""
 "Check to enable the cropping of the featured image in the blog/archive "
 "page, ie, if unchecked, the height will not be cropped."
 msgstr ""
 
-#: inc/customizer.php:146
+#: inc/customizer.php:151
 msgid "Custom CSS"
 msgstr ""
 
-#: inc/customizer.php:163
+#: inc/customizer.php:168
 msgid "Add your custom css here and design live! (for advanced users)"
 msgstr ""
 
@@ -311,23 +317,23 @@ msgstr ""
 msgid "Follow %s on Facebook"
 msgstr ""
 
-#: inc/extras.php:68 inc/template-tags.php:164
+#: inc/extras.php:68
 msgid "Author: %s"
 msgstr ""
 
-#: inc/extras.php:76 inc/template-tags.php:170
+#: inc/extras.php:76
 msgid "Day: %s"
 msgstr ""
 
-#: inc/extras.php:79 inc/template-tags.php:168
+#: inc/extras.php:79
 msgid "Month: %s"
 msgstr ""
 
-#: inc/extras.php:82 inc/template-tags.php:166
+#: inc/extras.php:82
 msgid "Year: %s"
 msgstr ""
 
-#: inc/extras.php:85 inc/template-tags.php:178 sidebar.php:18
+#: inc/extras.php:85 sidebar.php:18
 msgid "Archives"
 msgstr ""
 
@@ -393,23 +399,6 @@ msgstr ""
 msgid " %1$s"
 msgstr ""
 
-#: inc/template-tags.php:160
-msgid "Category: %s"
-msgstr ""
-
-#: inc/template-tags.php:162
-msgid "Tag: %s"
-msgstr ""
-
-#: inc/template-tags.php:172
-msgid "Archives: %s"
-msgstr ""
-
-#: inc/template-tags.php:176
-#. translators: 1: Taxonomy singular name, 2: Current taxonomy term
-msgid "%1$s: %2$s"
-msgstr ""
-
 #: searchform.php:13
 msgid "Search for:"
 msgstr ""
@@ -459,19 +448,4 @@ msgstr ""
 #: inc/template-tags.php:77
 msgctxt "Next post link"
 msgid "%title<span><i class=\"fa fa-arrow-circle-o-right\"></i></span>"
-msgstr ""
-
-#: inc/template-tags.php:166
-msgctxt "yearly archives date format"
-msgid "Y"
-msgstr ""
-
-#: inc/template-tags.php:168
-msgctxt "monthly archives date format"
-msgid "F Y"
-msgstr ""
-
-#: inc/template-tags.php:170
-msgctxt "daily archives date format"
-msgid "F j, Y"
 msgstr ""
