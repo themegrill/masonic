@@ -162,13 +162,13 @@ function masonic_scripts() {
 
    wp_enqueue_script('masonic-search-toggle', get_template_directory_uri() . '/js/search-toggle.js', array('jquery'), '20150106', true);
 
-   wp_enqueue_script('masonic-fitvids', get_template_directory_uri() . '/js/fitvids/jquery.fitvids.js', array('jquery'), '20150331', true);
+   wp_enqueue_script('masonic-fitvids', get_template_directory_uri() . '/js/fitvids/jquery.fitvids.js', array('jquery'), '1.2.0', true);
 
    wp_enqueue_script('masonic-fitvids-setting', get_template_directory_uri() . '/js/fitvids/fitvids-setting.js', array('masonic-fitvids'), '20150331', true);
 
    wp_enqueue_script('masonic-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true);
 
-   wp_enqueue_script('masonic-bxslider', get_template_directory_uri() . '/js/jquery.bxslider/jquery.bxslider.min.js', array('jquery'), '20130115', true);
+   wp_enqueue_script('masonic-bxslider', get_template_directory_uri() . '/js/jquery.bxslider/jquery.bxslider.min.js', array('jquery'), '4.2.12', true);
 
 	wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/js/html5shiv.js', array(), '3.7.3', false );
 	wp_script_add_data( 'html5shiv', 'conditional', 'lte IE 8' );

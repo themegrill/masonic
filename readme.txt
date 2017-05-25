@@ -43,6 +43,11 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Tweaks - Updated font awesome to `v4.7.0`
+* Tweaks - Updated fitvids to `v1.2.0`
+* Tweaks - Updated bxslider to `v4.2.12`
+
 = Version 1.2.9 - 2017-05-01 =
 * Tweaks - Remove unrequired function the_archive_title and the_archive_description as it is bundled in WordPress since 4.1
 * Feature - Added theme support for WooCommerce 3.0 product gallery.
