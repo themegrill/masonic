@@ -131,7 +131,7 @@ class Masonic_Admin {
 
 			<a href="<?php echo esc_url( apply_filters( 'masonic_pro_theme_url', 'https://demo.themegrill.com/masonic/' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Demo', 'masonic' ); ?></a>
 
-			<a href="<?php echo esc_url( apply_filters( 'masonic_pro_theme_url', 'http://wordpress.org/support/view/theme-reviews/masonic?filter=5' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'Rate this theme', 'masonic' ); ?></a>
+			<a href="<?php echo esc_url( apply_filters( 'masonic_pro_theme_url', 'https://wordpress.org/support/theme/masonic/reviews/?filter=5' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'Rate this theme', 'masonic' ); ?></a>
 		</p>
 
 		<h2 class="nav-tab-wrapper">
