@@ -363,6 +363,13 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/post-formats.php';
 
 /**
+ * Load Demo Importer Configs.
+ */
+if ( class_exists( 'TG_Demo_Importer' ) ) {
+  require get_template_directory() . '/inc/demo-config.php';
+}
+
+/**
  * Assign the Masonic version to a variable.
  */
 $theme            = wp_get_theme( 'masonic' );
