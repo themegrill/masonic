@@ -378,5 +378,11 @@ $masonic_version = $theme['Version'];
 /* Calling in the admin area for the Welcome Page */
 if ( is_admin() ) {
 	require get_template_directory() . '/inc/admin/class-masonic-admin.php';
+
+/**
+ * Load TGMPA Configs.
+ */
+require get_template_directory() . '/inc/tgm-plugin-activation/class-tgm-plugin-activation.php';
+require get_template_directory() . '/inc/tgm-plugin-activation/tgmpa-masonic.php';
 }
 
