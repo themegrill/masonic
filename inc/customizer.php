@@ -41,9 +41,10 @@ function masonic_register_theme_customizer($wp_customize) {
    foreach ($masonic_colors as $masonic_color) {
       $wp_customize->add_setting(
               $masonic_color['id'], array(
-          'default' => $masonic_color['default'],
-          'capability' => 'edit_theme_options',
-          'sanitize_callback' => 'masonic_sanitize_hex_color',
+          'default'              => $masonic_color['default'],
+          'capability'           => 'edit_theme_options',
+          'transport'            => 'postMessage',
+          'sanitize_callback'    => 'masonic_sanitize_hex_color',
           'sanitize_js_callback' => 'masonic_sanitize_escaping'
               )
       );
