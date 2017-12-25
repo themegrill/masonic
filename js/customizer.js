@@ -65,4 +65,21 @@
         }
         );
     } );
+
+    // Link color option
+    wp.customize( 'masonic_link_color', function ( value ) {
+        value.bind( function ( linkColor ) {
+            // Store internal style for primary color
+            var linkColorStyle = '<style id="masonic-internal-link-color">  a { color: ' + linkColor + '; }' +
+           '.button { color: ' + linkColor + '; }' +
+           '.catagory-type a { color: ' + linkColor + '; }' +
+           '.widget_rss li a { color: ' + linkColor + '; }' +
+           '.entry-date a .entry-date { color: ' + linkColor + '; }</style>';
+
+            // Remove previously create internal style and add new one.
+            $( 'head #masonic-internal-link-color' ).remove();
+            $( 'head' ).append( linkColorStyle );
+        }
+        );
+    } );
 })(jQuery);
