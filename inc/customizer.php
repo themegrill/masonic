@@ -7,31 +7,23 @@
  * @since 1.0
  */
 
-/**
- * Add postMessage support for site title and description for the Theme Customizer.
- *
- * @param WP_Customize_Manager $wp_customize Theme Customizer object.
- */
-function masonic_customize_register($wp_customize) {
+function masonic_register_theme_customizer($wp_customize) {
+
    $wp_customize->get_setting('blogname')->transport = 'postMessage';
    $wp_customize->get_setting('blogdescription')->transport = 'postMessage';
    $wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
-}
 
-add_action('customize_register', 'masonic_customize_register');
+   if ( isset( $wp_customize->selective_refresh ) ) {
+      $wp_customize->selective_refresh->add_partial( 'blogname', array(
+         'selector'        => '.site-title a',
+         'render_callback' => 'masonic_customize_partial_blogname',
+      ) );
 
-/**
- * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
- */
-function masonic_customize_preview_js() {
-   wp_enqueue_script('masonic_customizer', get_template_directory_uri() . '/js/customizer.js', array('customize-preview'), '20130508', true);
-}
-
-add_action('customize_preview_init', 'masonic_customize_preview_js');
-
-function masonic_register_theme_customizer($wp_customize) {
-
-
+      $wp_customize->selective_refresh->add_partial( 'blogdescription', array(
+         'selector'        => '.site-description',
+         'render_callback' => 'masonic_customize_partial_blogdescription',
+      ) );
+   }
 
    // masonic color options
    $masonic_colors = array('masonic_primary_color' => array(
@@ -196,6 +188,33 @@ function masonic_register_theme_customizer($wp_customize) {
 }
 
 add_action('customize_register', 'masonic_register_theme_customizer');
+
+/**
+ * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
+ */
+function masonic_customize_preview_js() {
+   wp_enqueue_script('masonic_customizer', get_template_directory_uri() . '/js/customizer.js', array('customize-preview'), false, true);
+}
+
+add_action('customize_preview_init', 'masonic_customize_preview_js');
+
+/**
+ * Render the site title for the selective refresh partial.
+ *
+ * @return void
+ */
+function masonic_customize_partial_blogname() {
+   bloginfo( 'name' );
+}
+
+/**
+ * Render the site tagline for the selective refresh partial.
+ *
+ * @return void
+ */
+function masonic_customize_partial_blogdescription() {
+   bloginfo( 'description' );
+}
 
 function masonic_customizer_css() {
    $customizer_css = '';
