@@ -36,7 +36,6 @@
 
     // Primary color option
     wp.customize( 'masonic_primary_color', function ( value ) {
-            console.log( 'chalyo' );
         value.bind( function ( primaryColor ) {
             // Store internal style for primary color
             var primaryColorStyle = '<style id="masonic-internal-primary-color"> blockquote { border-left: 2px solid ' + primaryColor + '; }' +
