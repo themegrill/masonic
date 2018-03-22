@@ -45,7 +45,8 @@ and we will include it within the theme from next version update.
 == Changelog ==
 
 = Version TBD =
-* Tweaks - Added support for themegrill demo importer plugin.
+* Tweaks - Added support for ThemeGrill Demo Importer plugin.
+* Fix - Slider anchors unclickable in Firefox browsers versioned 59+.
 
 = Version 1.2.9 - 2017-05-01 =
 * Tweaks - Remove unrequired function the_archive_title and the_archive_description as it is bundled in WordPress since 4.1
