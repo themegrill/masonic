@@ -47,6 +47,7 @@ and we will include it within the theme from next version update.
 = Version TBD =
 * Tweaks - Added support for ThemeGrill Demo Importer plugin.
 * Fix - Slider anchors unclickable in Firefox browsers versioned 59+.
+* Feature - Adds Support for Video Header introduced in WordPress 4.7
 * Tweaks - Added support for themegrill demo importer plugin.
 * Tweaks - Introduce selective refresh and live js for site title, description and customizer option
 
