@@ -44,7 +44,7 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 
-= Version TBD =
+= Version 1.3.0 - 2018-03-22 =
 * Tweaks - Added support for ThemeGrill Demo Importer plugin.
 * Fix - Slider anchors unclickable in Firefox browsers versioned 59+.
 * Feature - Adds Support for Video Header introduced in WordPress 4.7
