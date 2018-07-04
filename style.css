@@ -439,6 +439,7 @@ input[type=checkbox]:checked ~ #menu {
 	left: 0;
 	position: relative;
 	z-index: 9999;
+	width: 50px;
 }
 .page-content .masonic-search {
 	border: 1px solid #f2f2f2;
@@ -1458,18 +1459,16 @@ iframe#wp-custom-header-video {
 		margin:0 auto;
 	}
 	.site-branding {
-		padding: 0 0 0 30px;
 		position: relative;
 		width: 100%;
 	}
 	.site-header-text {
 		bottom: 20px;
-		/*margin: 0 30px;*/
-		position: absolute;
+		position: absolute;		
+		left: 20px;
+		right: 20px;
 	}
 	.main-header {
-		/*float: left;*/
-		/*margin: 5px 20px 0 0;*/
 		position: relative;
 	}
 	
@@ -1477,7 +1476,6 @@ iframe#wp-custom-header-video {
 		float: left;
 		font-size: 50px;
 		line-height: 60px;
-		/*font-size: 46px;*/
 		word-break: break-all;
 	}
 	nav {
@@ -1571,7 +1569,7 @@ iframe#wp-custom-header-video {
 		padding: 0 0 0 20px;
 	}
 	#masonic-toggle-label {
-		display:block;
+		display:inline-block;
 	}
 	#masonic-toggle-label:before {
 		display: inline-block;
@@ -1584,7 +1582,7 @@ iframe#wp-custom-header-video {
 	#masonic {
 		position: fixed;
 		top: 0;
-		left:-300px;
+		left:-310px;
 		height: 100%;
 		width: 300px;
 		overflow-x: hidden;
@@ -1592,10 +1590,6 @@ iframe#wp-custom-header-video {
 		-webkit-overflow-scrolling: touch;
 		z-index: 9999;
 		background: #333;
-	}
-	#masonic-toggle:checked ~ #masonic-toggle-label {
-		height: 100%;
-		width: calc(100% - 300px);
 	}
 	#masonic-toggle:checked ~ #masonic-toggle-label, #masonic-toggle:checked ~ header {
 		left: 305px;
@@ -1677,10 +1671,6 @@ iframe#wp-custom-header-video {
 		width: 100%;
 		margin-left: 20px;
 	}
-	#masonic-toggle:checked ~ #masonic-toggle-label {
-		height: 100%;
-		width: 50px;
-	}
 	.masonic-search-toggle .masonic-search {
 		width: 96%;
 	}
@@ -1741,10 +1731,14 @@ iframe#wp-custom-header-video {
 }
 @media screen and (max-width: 480px) {
 	#masonic {
-		width: calc(100% - 60px);
+		left: -110%;
+		width: calc(100% - 50px);
+	}
+	#masonic-toggle:checked ~ #masonic {
+		left: 0;
 	}
 	#masonic-toggle:checked ~ #masonic-toggle-label {
-		left: calc(100% - 60px);
+		left: calc(100% - 50px);
 	}
 	
 	#masonic-toggle:checked ~ #masonic-toggle-label:before {
