@@ -15,6 +15,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Setup demo importer packages.
  *
+ * @deprecated 1.5.0
+ *
  * @param  array $packages
  *
  * @return array
@@ -31,3 +33,4 @@ function masonic_demo_importer_packages( $packages ) {
 }
 
 add_filter( 'themegrill_demo_importer_packages', 'masonic_demo_importer_packages' );
+
