@@ -43,6 +43,8 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+== TBD ==
+* Update - About page theme links.
 
 = Version 1.3.0 - 2018-03-22 =
 * Tweaks - Added support for ThemeGrill Demo Importer plugin.
