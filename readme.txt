@@ -43,6 +43,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= TBD =
+* Remove - Backward compatible for header logo
+
 = Version 1.3.1 - 2018-09-06 =
 * Update - About page theme links.
 
