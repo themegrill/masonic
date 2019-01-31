@@ -191,3 +191,18 @@ function masonic_header_image_markup_filter() {
 }
 
 add_action( 'masonic_header_image_markup_render', 'masonic_header_image_markup_filter' );
+
+if ( ! function_exists( 'masonic_pingback_header' ) ) :
+
+	/**
+	 * Add a pingback url auto-discovery header for single posts, pages, or attachments.
+	 */
+	function masonic_pingback_header() {
+		if ( is_singular() && pings_open() ) {
+			printf( '<link rel="pingback" href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
+		}
+	}
+
+endif;
+
+add_action( 'wp_head', 'masonic_pingback_header' );
