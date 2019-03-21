@@ -46,6 +46,7 @@ and we will include it within the theme from next version update.
 = TBD =
 * Tweak - Modify pingback url autodiscovery for single posts, pages, or attachments.
 * Remove - Backward compatible for header logo
+* Update - BxSlider to 4.2.15
 
 = Version 1.3.1 - 2018-09-06 =
 * Update - About page theme links.
