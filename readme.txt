@@ -43,7 +43,7 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-= TBD =
+= Version 1.3.2 - 2019-03-26 =
 * Tweak - Modify pingback url autodiscovery for single posts, pages, or attachments.
 * Remove - Backward compatible for header logo
 * Update - BxSlider to 4.2.15
