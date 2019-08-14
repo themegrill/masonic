@@ -457,6 +457,9 @@ a {
 a:hover, a:focus, a:active {
 	color: #ffc800;
 }
+a:focus {
+	outline: thin dotted;
+}
 .catagory-type a:hover {
 	color: #ffc800;
 }
