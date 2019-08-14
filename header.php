@@ -27,7 +27,7 @@ if ( function_exists( 'wp_body_open' ) ) {
 ?>
 
 <div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'masonic' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#container"><?php _e( 'Skip to content', 'masonic' ); ?></a>
 
 	<header id="masthead" class="site-header clear">
 
