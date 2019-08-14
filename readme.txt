@@ -43,6 +43,11 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Fix   - Link for `skip-link` to content area.
+* Tweak - Update `screen-reader-text` CSS.
+* Tweak - Modify menu CSS for keyboard accessibility.
+
 = Version 1.3.2 - 2019-03-26 =
 * Tweak - Modify pingback url autodiscovery for single posts, pages, or attachments.
 * Remove - Backward compatible for header logo

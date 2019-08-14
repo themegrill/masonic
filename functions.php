@@ -173,6 +173,8 @@ function masonic_scripts() {
 	wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/js/html5shiv.js', array(), '3.7.3', false );
 	wp_script_add_data( 'html5shiv', 'conditional', 'lte IE 8' );
 
+	wp_enqueue_script('masonic-custom', get_template_directory_uri() . '/js/masonic-custom.js', array('jquery'), false, true);
+
    if (is_singular() && comments_open() && get_option('thread_comments')) {
       wp_enqueue_script('comment-reply');
    }

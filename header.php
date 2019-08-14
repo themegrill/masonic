@@ -27,7 +27,7 @@ if ( function_exists( 'wp_body_open' ) ) {
 ?>
 
 <div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'masonic' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#container"><?php _e( 'Skip to content', 'masonic' ); ?></a>
 
 	<header id="masthead" class="site-header clear">
 
@@ -74,7 +74,7 @@ if ( function_exists( 'wp_body_open' ) ) {
 			</div>
 		</div><!-- .site-branding -->
 
-		<nav class="navigation clear">
+		<nav class="navigation clear" id="site-navigation">
 			<input type="checkbox" id="masonic-toggle" name="masonic-toggle" />
 			<label for="masonic-toggle" id="masonic-toggle-label" class="fa fa-navicon fa-2x"></label>
 			<div class="wrapper clear" id="masonic">
@@ -82,7 +82,7 @@ if ( function_exists( 'wp_body_open' ) ) {
 				if ( has_nav_menu( 'primary' ) ) {
 					wp_nav_menu( array(
 						'theme_location' => 'primary',
-						'items_wrap'     => '<ul id="%1$s" class="%2$s wrapper clear">%3$s</ul>',
+						'items_wrap'     => '<ul id="%1$s" class="%2$s nav-menu wrapper clear">%3$s</ul>',
 						'container'      => '',
 					) );
 				} else {
