@@ -373,8 +373,13 @@ nav li:hover ul a:hover {
 	color:#fff;
 }
 nav li ul {
-	display: none;
+	left: -99999px;
 	margin: 0;
+}
+nav li:hover > ul,
+nav li.focus > ul {
+	left: auto;
+	background: #262626;
 }
 .sub-menu li a {
 	display: block;
@@ -402,10 +407,14 @@ nav ul li a:hover + .sub-menu, nav .sub-menu:hover {
 	background: #1d1d1d;
 }
 nav ul ul ul {
-	left: 200px;
+	left: -99999px;
 	max-width: 200px;
 	top: auto;
 	margin:-40px 0 0;
+}
+nav ul ul li:hover > ul,
+nav ul ul li.focus > ul {
+	left: 100%;
 }
 nav .show-menu {
 	text-decoration: none;

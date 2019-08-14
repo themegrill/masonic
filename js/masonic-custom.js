@@ -1,7 +1,7 @@
 ( function() {
 	var container, menu, links, i, len;
 
-	container = document.getElementById( 'masonic' );
+	container = document.getElementById( 'site-navigation' );
 	if ( ! container ) {
 		return;
 	}
@@ -23,7 +23,7 @@
 	function toggleFocus() {
 		var self = this;
 
-		// Move up through the ancestors of the current link until we hit .nav-menu.
+		// Move up through the ancestors of the current link until we hit .menu.
 		while ( -1 === self.className.indexOf( 'nav-menu' ) ) {
 			// On li elements toggle the class .focus.
 			if ( 'li' === self.tagName.toLowerCase() ) {
