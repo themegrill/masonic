@@ -212,6 +212,11 @@ add_action( 'wp_head', 'masonic_pingback_header' );
  */
 if ( ! function_exists( 'masonic_plugin_version_compare' ) ) {
 	function masonic_plugin_version_compare( $plugin_slug, $version_to_compare ) {
+
+		if ( ! function_exists( 'get_plugins' ) ) {
+			require_once ABSPATH . 'wp-admin/includes/plugin.php';
+		}
+
 		$installed_plugins = get_plugins();
 
 		// Plugin not installed.

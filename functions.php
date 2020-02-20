@@ -365,11 +365,6 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/post-formats.php';
 
 /**
- * Detect plugin. For use on Front End only.
- */
-include_once ABSPATH . 'wp-admin/includes/plugin.php';
-
-/**
  * Load Demo Importer Configs.
  */
 if ( class_exists( 'TG_Demo_Importer' ) ) {
