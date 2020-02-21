@@ -43,7 +43,7 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
+= Version 1.3.3 - 2020-02-20 =
 * Fix   - Link for `skip-link` to content area.
 * Tweak - Update `screen-reader-text` CSS.
 * Tweak - Modify menu CSS for keyboard accessibility.
