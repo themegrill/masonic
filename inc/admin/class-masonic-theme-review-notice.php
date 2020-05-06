@@ -54,8 +54,7 @@ class Masonic_Theme_Review_Notice {
 	 */
 	public function masonic_theme_review_notice() {
 
-		global $current_user;
-		$user_id                  = $current_user->ID;
+		$user_id                  = get_current_user_id();
 		$current_user             = wp_get_current_user();
 		$ignored_notice           = get_user_meta( $user_id, 'masonic_ignore_theme_review_notice', true );
 		$ignored_notice_partially = get_user_meta( $user_id, 'nag_masonic_ignore_theme_review_notice_partially', true );
@@ -118,8 +117,7 @@ class Masonic_Theme_Review_Notice {
 	 */
 	public function masonic_ignore_theme_review_notice() {
 
-		global $current_user;
-		$user_id = $current_user->ID;
+		$user_id = get_current_user_id();
 
 		/* If user clicks to ignore the notice, add that to their user meta */
 		if ( isset( $_GET['nag_masonic_ignore_theme_review_notice'] ) && '0' == $_GET['nag_masonic_ignore_theme_review_notice'] ) {
@@ -133,8 +131,7 @@ class Masonic_Theme_Review_Notice {
 	 */
 	public function masonic_ignore_theme_review_notice_partially() {
 
-		global $current_user;
-		$user_id = $current_user->ID;
+		$user_id = get_current_user_id();
 
 		/* If user clicks to ignore the notice, add that to their user meta */
 		if ( isset( $_GET['nag_masonic_ignore_theme_review_notice_partially'] ) && '0' == $_GET['nag_masonic_ignore_theme_review_notice_partially'] ) {
