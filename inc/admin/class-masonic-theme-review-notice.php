@@ -28,8 +28,7 @@ class Masonic_Theme_Review_Notice {
 
 		add_action( 'after_setup_theme', array( $this, 'masonic_theme_rating_notice' ) );
 		add_action( 'switch_theme', array( $this, 'masonic_theme_rating_notice_data_remove' ) );
-		add_action( 'admin_enqueue_scripts', array( $this, 'masonic_theme_rating_notice_enqueue' ) );
-
+		
 	}
 
 	/**
@@ -169,15 +168,6 @@ class Masonic_Theme_Review_Notice {
 			}
 
 		}
-	}
-
-	/**
-	 * Enqueue the required CSS file for theme review notice on admin page.
-	 */
-	public function masonic_theme_rating_notice_enqueue() {
-
-		wp_enqueue_style( 'masonic-theme-review-notice', get_template_directory_uri() . '/css/admin/theme-review-notice.css' );
-
 	}
 
 }
