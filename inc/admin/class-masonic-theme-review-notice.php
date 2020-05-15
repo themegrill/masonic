@@ -28,7 +28,7 @@ class Masonic_Theme_Review_Notice {
 
 		add_action( 'after_setup_theme', array( $this, 'masonic_theme_rating_notice' ) );
 		add_action( 'switch_theme', array( $this, 'masonic_theme_rating_notice_data_remove' ) );
-		
+		add_action( 'admin_enqueue_scripts', array( $this, 'masonic_theme_rating_notice_enqueue' ) );
 	}
 
 	/**
@@ -65,7 +65,7 @@ class Masonic_Theme_Review_Notice {
 		 * 2. If the user has ignored the message partially for 15 days.
 		 * 3. Dismiss always if clicked on 'I Already Did' button.
 		 */
-		if ( ( get_option( 'masonic_theme_installed_time' ) > strtotime( '-15 sec' ) ) || ( $ignored_notice_partially > strtotime( '-15 sec' ) ) || ( $ignored_notice ) ) {
+		if ( ( get_option( 'masonic_theme_installed_time' ) > strtotime( '-15 day' ) ) || ( $ignored_notice_partially > strtotime( '-15 day' ) ) || ( $ignored_notice ) ) {
 			return;
 		}
 		?>
@@ -76,7 +76,8 @@ class Masonic_Theme_Review_Notice {
 				printf(
 					/* Translators: %1$s current user display name. */
 					esc_html__(
-						'Howdy, %1$s! It seems that you have been using this theme for more than 15 day. We hope you are happy with everything that the theme has to offer. If you can spare a minute, please help us by leaving a 5-star review on WordPress.org.  By spreading the love, we can continue to develop new amazing features in the future, for free!', 'masonic'
+						'Howdy, %1$s! It seems that you have been using this theme for more than 15 day. We hope you are happy with everything that the theme has to offer. If you can spare a minute, please help us by leaving a 5-star review on WordPress.org.  By spreading the love, we can continue to develop new amazing features in the future, for free!',
+						'masonic'
 					),
 					'<strong>' . esc_html( $current_user->display_name ) . '</strong>'
 				);
@@ -166,10 +167,17 @@ class Masonic_Theme_Review_Notice {
 			if ( $ignored_notice_partially ) {
 				delete_user_meta( $user->ID, 'nag_masonic_ignore_theme_review_notice_partially' );
 			}
-
 		}
 	}
 
+	/**
+	 * Enqueue the required CSS file for theme review notice on admin page.
+	 */
+	public function masonic_theme_rating_notice_enqueue() {
+
+		wp_enqueue_style( 'masonic-theme-review-notice', get_template_directory_uri() . '/css/admin/theme-review-notice.css' );
+
+	}
 }
 
 new Masonic_Theme_Review_Notice();
