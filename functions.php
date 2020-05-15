@@ -381,6 +381,7 @@ $masonic_version = $theme['Version'];
 if ( is_admin() ) {
 	require get_template_directory() . '/inc/admin/class-masonic-admin.php';
   require get_template_directory() . '/inc/admin/class-masonic-tdi-notice.php';
+  require get_template_directory() . '/inc/admin/class-masonic-theme-review-notice.php';
 
 /**
  * Load TGMPA Configs.
