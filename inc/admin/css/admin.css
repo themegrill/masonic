@@ -20,23 +20,23 @@ pre.changelog {
 pre.changelog span {
 	font-weight: 700;
 }
-.return-to-dashboard.radiate {
+.return-to-dashboard.masonic {
 	clear: both;
 }
 
-p.radiate-actions a.skip {
+p.masonic-actions a.skip {
 	opacity: .5;
 }
 
-p.radiate-actions a.docs:focus,
-p.radiate-actions a.docs:hover,
-p.radiate-actions a.skip:focus,
-p.radiate-actions a.skip:hover {
+p.masonic-actions a.docs:focus,
+p.masonic-actions a.docs:hover,
+p.masonic-actions a.skip:focus,
+p.masonic-actions a.skip:hover {
 	opacity: 1;
 }
 
-p.radiate-actions a.button-primary,
-p.radiate-actions a.button-secondary {
+p.masonic-actions a.button-primary,
+p.masonic-actions a.button-secondary {
 	text-decoration: none!important;
 }
 
@@ -91,40 +91,40 @@ p.radiate-actions a.button-secondary {
 /**
  * Notices.
  */
-.radiate-notice {
+.masonic-notice {
 	position: relative;
 	padding: 6px 40px 6px 12px;
 }
 
-.radiate-notice .links {
+.masonic-notice .links {
 	margin: 0.5em 0;
 }
 
-.radiate-notice .links a {
+.masonic-notice .links a {
 	margin: 2px;
 }
 
-.radiate-notice .links a > span {
+.masonic-notice .links a > span {
 	vertical-align: middle;
 }
 
-.radiate-notice .notice-text .coupon-code {
+.masonic-notice .notice-text .coupon-code {
 	display: inline-block;
 }
 
-.radiate-notice .notice-dismiss {
+.masonic-notice .notice-dismiss {
 	text-decoration: none;
 }
 
 /**
  * Welcome notice.
  */
-.radiate-message__content {
+.masonic-message__content {
 	display: flex;
 	align-items: center;
 }
 
-.radiate-message__content .radiate-message__image {
+.masonic-message__content .masonic-message__image {
 	flex: 0 0 160px;
 	min-height: 100px;
 	margin-right: 12px;
@@ -132,35 +132,35 @@ p.radiate-actions a.button-secondary {
 	border-right: 1px solid #FCFCFD;
 }
 
-.radiate-message__content .radiate-message__image .radiate-screenshot {
+.masonic-message__content .masonic-message__image .masonic-screenshot {
 	width: 100%;
 	box-shadow: 0 0 1px 0 #ccd0d4;
 	margin: 0;
 	float: none;
 }
 
-.radiate-message__content .radiate-message__heading {
+.masonic-message__content .masonic-message__heading {
 	margin-top: 0;
 	margin-bottom: 12px;
 	line-height: 1.4;
 }
 
-.radiate-message__content .radiate-message__cta {
+.masonic-message__content .masonic-message__cta {
 	display: flex;
 	align-items: center;
 }
 
-.radiate-message__content .radiate-message__cta .plugin-install-notice {
+.masonic-message__content .masonic-message__cta .plugin-install-notice {
 	margin-left: 15px;
 	line-height: 1.4;
 }
 
-.radiate-message__content .radiate-message__cta a:before {
+.masonic-message__content .masonic-message__cta a:before {
 	margin: 5px;
 	vertical-align: middle;
 }
 
-a.radiate-message-close {
+a.masonic-message-close {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -170,7 +170,7 @@ a.radiate-message-close {
 	text-decoration: none;
 }
 
-a.radiate-message-close:before {
+a.masonic-message-close:before {
 	position: absolute;
 	top: 8px;
 	left: 0;
@@ -179,7 +179,7 @@ a.radiate-message-close:before {
 }
 
 @media screen and (max-width: 782px) {
-	.radiate-message__image {
+	.masonic-message__image {
 		display: none;
 	}
 }
@@ -187,7 +187,7 @@ a.radiate-message-close:before {
 /**
  * Dashboard page.
  */
-.wrap .radiate-header {
+.wrap .masonic-header {
 	background-color: #fff;
 	padding: 12px 20px;
 	border-bottom: 1px solid #ccd0d4;
@@ -195,7 +195,7 @@ a.radiate-message-close:before {
 	margin-right: -20px;
 }
 
-.appearance_page_radiate-options .wrap {
+.appearance_page_masonic-options .wrap {
 	margin-top: 0;
 }
 
@@ -203,10 +203,10 @@ a.radiate-message-close:before {
  * Responsive.
  */
 @media (max-width: 600px) {
-	.radiate-message__content .radiate-screenshot {
+	.masonic-message__content .masonic-screenshot {
 		display: none;
 	}
-	.radiate-message__content .radiate-message__text {
+	.masonic-message__content .masonic-message__text {
 		padding: 0;
 		width: 100%;
 	}
