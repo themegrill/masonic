@@ -374,8 +374,9 @@ if ( class_exists( 'TG_Demo_Importer' ) ) {
 /**
  * Assign the Masonic version to a variable.
  */
-$theme            = wp_get_theme( 'masonic' );
-$masonic_version = $theme['Version'];
+$masonic_theme = wp_get_theme( 'masonic' );
+
+define( 'MASONIC_THEME_VERSION', $masonic_theme->get( 'Version' ) );
 
 /* Calling in the admin area for the Welcome Page */
 if ( is_admin() ) {
