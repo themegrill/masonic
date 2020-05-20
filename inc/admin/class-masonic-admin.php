@@ -23,8 +23,6 @@ if ( ! class_exists( 'Masonic_Admin' ) ) :
 		 */
 		public function __construct() {
 			add_action( 'admin_menu', array( $this, 'admin_menu' ) );
-			add_action( 'wp_loaded', array( __CLASS__, 'hide_notices' ) );
-			add_action( 'load-themes.php', array( $this, 'admin_notice' ) );
 		}
 
 		/**
@@ -33,10 +31,16 @@ if ( ! class_exists( 'Masonic_Admin' ) ) :
 		public function admin_menu() {
 			$theme = wp_get_theme( get_template() );
 
-			$page = add_theme_page( esc_html__( 'About', 'masonic' ) . ' ' . $theme->display( 'Name' ), esc_html__( 'About', 'masonic' ) . ' ' . $theme->display( 'Name' ), 'activate_plugins', 'masonic-welcome', array(
-				$this,
-				'welcome_screen',
-			) );
+			$page = add_theme_page(
+				esc_html__( 'About', 'masonic' ) . ' ' . $theme->display( 'Name' ),
+				esc_html__( 'About', 'masonic' ) . ' ' . $theme->display( 'Name' ),
+				'activate_plugins',
+				'masonic-welcome',
+				array(
+					$this,
+					'welcome_screen',
+				)
+			);
 			add_action( 'admin_print_styles-' . $page, array( $this, 'enqueue_styles' ) );
 		}
 
@@ -47,58 +51,6 @@ if ( ! class_exists( 'Masonic_Admin' ) ) :
 			global $masonic_version;
 
 			wp_enqueue_style( 'masonic-welcome', get_template_directory_uri() . '/css/admin/welcome.css', array(), $masonic_version );
-		}
-
-		/**
-		 * Add admin notice.
-		 */
-		public function admin_notice() {
-			global $masonic_version, $pagenow;
-
-			wp_enqueue_style( 'masonic-message', get_template_directory_uri() . '/css/admin/message.css', array(), $masonic_version );
-
-			// Let's bail on theme activation.
-			if ( 'themes.php' == $pagenow && isset( $_GET['activated'] ) ) {
-				add_action( 'admin_notices', array( $this, 'welcome_notice' ) );
-				update_option( 'masonic_admin_notice_welcome', 1 );
-
-				// No option? Let run the notice wizard again..
-			} elseif ( ! get_option( 'masonic_admin_notice_welcome' ) ) {
-				add_action( 'admin_notices', array( $this, 'welcome_notice' ) );
-			}
-		}
-
-		/**
-		 * Hide a notice if the GET variable is set.
-		 */
-		public static function hide_notices() {
-			if ( isset( $_GET['masonic-hide-notice'] ) && isset( $_GET['_masonic_notice_nonce'] ) ) {
-				if ( ! wp_verify_nonce( $_GET['_masonic_notice_nonce'], 'masonic_hide_notices_nonce' ) ) {
-					wp_die( __( 'Action failed. Please refresh the page and retry.', 'masonic' ) );
-				}
-
-				if ( ! current_user_can( 'manage_options' ) ) {
-					wp_die( __( 'Cheatin&#8217; huh?', 'masonic' ) );
-				}
-
-				$hide_notice = sanitize_text_field( $_GET['masonic-hide-notice'] );
-				update_option( 'masonic_admin_notice_' . $hide_notice, 1 );
-			}
-		}
-
-		/**
-		 * Show welcome notice.
-		 */
-		public function welcome_notice() {
-			?>
-			<div id="message" class="updated masonic-message">
-				<a class="masonic-message-close notice-dismiss" href="<?php echo esc_url( wp_nonce_url( remove_query_arg( array( 'activated' ), add_query_arg( 'masonic-hide-notice', 'welcome' ) ), 'masonic_hide_notices_nonce', '_masonic_notice_nonce' ) ); ?>"><?php esc_html_e( 'Dismiss', 'masonic' ); ?></a>
-				<p><?php printf( esc_html__( 'Welcome! Thank you for choosing masonic! To fully take advantage of the best our theme can offer please make sure you visit our %swelcome page%s.', 'masonic' ), '<a href="' . esc_url( admin_url( 'themes.php?page=masonic-welcome' ) ) . '">', '</a>' ); ?></p>
-				<p class="submit">
-					<a class="button-secondary" href="<?php echo esc_url( admin_url( 'themes.php?page=masonic-welcome' ) ); ?>"><?php esc_html_e( 'Get started with Masonic', 'masonic' ); ?></a>
-				</p>
-			</div>
-			<?php
 		}
 
 		/**
@@ -138,25 +90,59 @@ if ( ! class_exists( 'Masonic_Admin' ) ) :
 			</p>
 
 			<h2 class="nav-tab-wrapper">
-				<a class="nav-tab <?php if ( empty( $_GET['tab'] ) && $_GET['page'] == 'masonic-welcome' ) {
+				<a class="nav-tab 
+				<?php
+				if ( empty( $_GET['tab'] ) && $_GET['page'] == 'masonic-welcome' ) {
 					echo 'nav-tab-active';
-				} ?>" href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'masonic-welcome' ), 'themes.php' ) ) ); ?>">
+				}
+				?>
+				" href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'masonic-welcome' ), 'themes.php' ) ) ); ?>">
 					<?php echo $theme->display( 'Name' ); ?>
 				</a>
-				<a class="nav-tab <?php if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'supported_plugins' ) {
+				<a class="nav-tab 
+				<?php
+				if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'supported_plugins' ) {
 					echo 'nav-tab-active';
-				} ?>" href="<?php echo esc_url( admin_url( add_query_arg( array(
-					'page' => 'masonic-welcome',
-					'tab'  => 'supported_plugins',
-				), 'themes.php' ) ) ); ?>">
+				}
+				?>
+				" href="
+				<?php
+				echo esc_url(
+					admin_url(
+						add_query_arg(
+							array(
+								'page' => 'masonic-welcome',
+								'tab'  => 'supported_plugins',
+							),
+							'themes.php'
+						)
+					)
+				);
+				?>
+				">
 					<?php esc_html_e( 'Supported Plugins', 'masonic' ); ?>
 				</a>
-				<a class="nav-tab <?php if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'changelog' ) {
+				<a class="nav-tab 
+				<?php
+				if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'changelog' ) {
 					echo 'nav-tab-active';
-				} ?>" href="<?php echo esc_url( admin_url( add_query_arg( array(
-					'page' => 'masonic-welcome',
-					'tab'  => 'changelog',
-				), 'themes.php' ) ) ); ?>">
+				}
+				?>
+				" href="
+				<?php
+				echo esc_url(
+					admin_url(
+						add_query_arg(
+							array(
+								'page' => 'masonic-welcome',
+								'tab'  => 'changelog',
+							),
+							'themes.php'
+						)
+					)
+				);
+				?>
+				">
 					<?php esc_html_e( 'Changelog', 'masonic' ); ?>
 				</a>
 			</h2>
@@ -192,7 +178,7 @@ if ( ! class_exists( 'Masonic_Admin' ) ) :
 					<div class="under-the-hood two-col">
 						<div class="col">
 							<h3><?php esc_html_e( 'Theme Customizer', 'masonic' ); ?></h3>
-							<p><?php esc_html_e( 'All Theme Options are available via Customize screen.', 'masonic' ) ?></p>
+							<p><?php esc_html_e( 'All Theme Options are available via Customize screen.', 'masonic' ); ?></p>
 							<p>
 								<a href="<?php echo admin_url( 'customize.php' ); ?>" class="button button-secondary"><?php esc_html_e( 'Customize', 'masonic' ); ?></a>
 							</p>
@@ -200,7 +186,7 @@ if ( ! class_exists( 'Masonic_Admin' ) ) :
 
 						<div class="col">
 							<h3><?php esc_html_e( 'Documentation', 'masonic' ); ?></h3>
-							<p><?php esc_html_e( 'Please view our documentation page to setup the theme.', 'masonic' ) ?></p>
+							<p><?php esc_html_e( 'Please view our documentation page to setup the theme.', 'masonic' ); ?></p>
 							<p>
 								<a href="<?php echo esc_url( 'https://docs.themegrill.com/masonic/?utm_source=masonic-about&utm_medium=documentation-link&utm_campaign=documentation' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Documentation', 'masonic' ); ?></a>
 							</p>
@@ -208,7 +194,7 @@ if ( ! class_exists( 'Masonic_Admin' ) ) :
 
 						<div class="col">
 							<h3><?php esc_html_e( 'Got theme support question?', 'masonic' ); ?></h3>
-							<p><?php esc_html_e( 'Please put it in our dedicated support forum.', 'masonic' ) ?></p>
+							<p><?php esc_html_e( 'Please put it in our dedicated support forum.', 'masonic' ); ?></p>
 							<p>
 								<a href="<?php echo esc_url( 'https://themegrill.com/support-forum/?utm_source=masonic-about&utm_medium=support-forum-link&utm_campaign=support-forum' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Support', 'masonic' ); ?></a>
 							</p>
@@ -221,7 +207,7 @@ if ( ! class_exists( 'Masonic_Admin' ) ) :
 								echo ' ' . $theme->display( 'Name' );
 								?>
 							</h3>
-							<p><?php esc_html_e( 'Click below to translate this theme into your own language.', 'masonic' ) ?></p>
+							<p><?php esc_html_e( 'Click below to translate this theme into your own language.', 'masonic' ); ?></p>
 							<p>
 								<a href="<?php echo esc_url( 'http://translate.wordpress.org/projects/wp-themes/masonic' ); ?>" class="button button-secondary">
 									<?php
