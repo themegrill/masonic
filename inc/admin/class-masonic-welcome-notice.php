@@ -43,7 +43,7 @@ class Masonic_Welcome_Notice {
 
 			<div class="masonic-message__content">
 				<div class="masonic-message__image">
-					<img class="masonic-screenshot" src="<?php echo get_template_directory_uri(); ?>/screenshot.jpg" alt="<?php esc_html_e( 'Masonic', 'masonic' ); ?>" /><?php // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped, Squiz.PHP.EmbeddedPhp.SpacingBeforeClose ?>
+					<img class="masonic-screenshot" src="<?php echo get_template_directory_uri(); ?>/screenshot.png" alt="<?php esc_html_e( 'Masonic', 'masonic' ); ?>" /><?php // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped, Squiz.PHP.EmbeddedPhp.SpacingBeforeClose ?>
 				</div>
 
 				<div class="masonic-message__text">
