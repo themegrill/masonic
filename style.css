@@ -957,11 +957,14 @@ footer .blog-post{
 }
 .entry-info, .entry-content {
 	line-height: 30px;
-	padding: 20px;
+	padding: 0px 20px 20px 20px;
 }
 .entry-title {
 	padding:0 20px 20px;
 	word-wrap: break-word;
+}
+.post-header {
+	position:relative;
 }
 .post-header .entry-title, .post-header .entry-info, .post-header .entry-content {
 	line-height: 30px;
@@ -992,6 +995,9 @@ footer .blog-post{
 }
 .catagory-type {
 	margin: 10px auto 20px;
+	position: absolute;
+	top: 0;
+	left: 20px;
 }
 .catagory-type a {
 	background: none repeat scroll 0 0 #333;
@@ -1008,13 +1014,19 @@ footer .blog-post{
 }
 .post-header > figure {
 	float: right;
-	padding: 0;
-	width: 75%;
+	padding: 0px;
+	width: 100%;
+}
+
+.post-header > figure > img {
+	width: 100%;
+	height: auto;
 }
 .entry-info {
 	float: left;
 	font-size: 14px;
 	width: 100%;
+	margin-top: 20px;
 }
 .entry-author, .entry-standard, .entry-date, .entry-tag {
 	color: #ffc800;
@@ -1050,6 +1062,8 @@ article .post.shown, .no-js article .post, .no-cssanimations article .post {
 .no-sidebar-full-width .hentry, .no-sidebar-content-centered .hentry {
 	margin: 0 0 3.2%;
 }
+
+
 /*--------------------------------------------------------------
 10.3 Comments
 --------------------------------------------------------------*/
@@ -1636,16 +1650,6 @@ iframe#wp-custom-header-video {
 	}
 	.meta-info {
 		margin: 65px 0 0;
-	}
-	.catagory-type {
-		position: absolute;
-	}
-	.catagory-type a {
-		position: relative;
-		z-index: 999;
-	}
-	.catagory-type a:hover {
-		color:#ffc800;
 	}
 	.post-header > figure, .post-header .entry-info {
 		width: 100%;
