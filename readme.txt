@@ -43,6 +43,10 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= TBD =
+* Add   - Required header fields: `Tested up to` and `Requires PHP` in style.css.
+* Tweak - Add and improve theme-related notices.
+
 = Version 1.3.3 - 2020-02-20 =
 * Fix   - Link for `skip-link` to content area.
 * Tweak - Update `screen-reader-text` CSS.
