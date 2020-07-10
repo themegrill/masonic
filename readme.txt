@@ -44,6 +44,7 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 = TBD =
+* Enhancement - Update protocol to prevent not secure issue.
 * Add   - Required header fields: `Tested up to` and `Requires PHP` in style.css.
 * Tweak - Add and improve theme-related notices.
 
