@@ -232,7 +232,7 @@ add_filter('excerpt_more', 'masonic_read_more');
 if (!function_exists('masonic_footer_copyright')) :
 
    function masonic_footer_copyright() {
-      $wp_link = '<a href="' . 'http://wordpress.org' . '" target="_blank" title="' . esc_attr__('WordPress', 'masonic') . '"><span>' . __('WordPress', 'masonic') . '</span></a>';
+      $wp_link = '<a href="' . 'https://wordpress.org' . '" target="_blank" title="' . esc_attr__('WordPress', 'masonic') . '"><span>' . __('WordPress', 'masonic') . '</span></a>';
 
       $tg_link = '<a href="' . 'https://themegrill.com/themes/masonic' . '" target="_blank" title="' . esc_attr__('ThemeGrill', 'masonic') . '" rel="author"><span>' . __('ThemeGrill', 'masonic') . '</span></a>';
 
