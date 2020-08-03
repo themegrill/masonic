@@ -973,9 +973,6 @@ footer .blog-post{
 .entry-title {
 	border-bottom:thin solid #eaeaea;
 }
-.sticky {
-	border:1px solid #ffc800;
-}
 .entry-author:before, .entry-date:before, .entry-standard:before {
 	margin:0 5px 0 0;
 }
