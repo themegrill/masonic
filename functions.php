@@ -374,14 +374,7 @@ define( 'MASONIC_THEME_VERSION', $masonic_theme->get( 'Version' ) );
 /* Calling in the admin area for the Welcome Page */
 if ( is_admin() ) {
 	require get_template_directory() . '/inc/admin/class-masonic-admin.php';
-	require get_template_directory() . '/inc/admin/class-masonic-tdi-notice.php';
 	require get_template_directory() . '/inc/admin/class-masonic-welcome-notice.php';
+	require get_template_directory() . '/inc/admin/class-masonic-dashboard.php';
 	require get_template_directory() . '/inc/admin/class-masonic-theme-review-notice.php';
-
-	/**
-	* Load TGMPA Configs.
-	*/
-	require get_template_directory() . '/inc/tgm-plugin-activation/class-tgm-plugin-activation.php';
-	require get_template_directory() . '/inc/tgm-plugin-activation/tgmpa-masonic.php';
 }
-
