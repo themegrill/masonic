@@ -13,9 +13,6 @@ Resources packed within the theme.
 * FitVids by Chris Coyier and Paravel | WTFPL Licensed
 * HTML5 Shiv @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
 * Other custom js files are our own creation and is licensed under the same license as this theme.
-* Images in the screenshot are under CC0 license
-http://unsplash.com link: https://download.unsplash.com/photo-1427384906349-30452365b5e8
-http://pexels.com/ link: http://www.pexels.com/photo/4456/, http://www.pexels.com/photo/3452/ and http://www.pexels.com/photo/3656/
 
 All other resources and theme elements are licensed under the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html), version 2 or later.
 
@@ -43,7 +40,7 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-= TBD =
+= Version 1.3.4 - 2020-08-17 =
 * Enhancement - Update protocol to prevent not secure issue.
 * Add   - Required header fields: `Tested up to` and `Requires PHP` in style.css.
 * Tweak - Add and improve theme-related notices.
