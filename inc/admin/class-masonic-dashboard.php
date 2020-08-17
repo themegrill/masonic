@@ -98,7 +98,6 @@ class Masonic_Dashboard {
 						<ul>
 							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-media-text">' . esc_html__( 'Documentation', 'masonic' ) . '</a>', esc_url( 'https://docs.themegrill.com/masonic' ) ); ?></li>
 							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-layout">' . esc_html__( 'Starter Demos', 'masonic' ) . '</a>', esc_url( 'https://demo.themegrill.com/masonic-demos' ) ); ?></li>
-							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-migrate">' . esc_html__( 'Premium Version', 'masonic' ) . '</a>', esc_url( 'https://themegrill.com/themes/masonic' ) ); ?></li>
 						</ul>
 					</div>
 
