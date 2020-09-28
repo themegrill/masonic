@@ -40,6 +40,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Fix - Drop-down mobile menu not appearing on small devices.
+
 = Version 1.3.4 - 2020-08-17 =
 * Enhancement - Update protocol to prevent not secure issue.
 * Add   - Required header fields: `Tested up to` and `Requires PHP` in style.css.

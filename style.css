@@ -1827,7 +1827,7 @@ iframe#wp-custom-header-video {
 	nav li ul {
 		left: auto;
 	}
-	
+
 	nav ul ul li:hover > ul, nav ul ul li.focus > ul {
 		left: auto;
 	}
