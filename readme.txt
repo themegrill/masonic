@@ -8,6 +8,7 @@ External resources linked to the theme.
   Licensed under Apache License, version 2.0 http://www.apache.org/licenses/LICENSE-2.0.html
 
 Resources packed within the theme.
+* Images on screenshot is from https://pxhere.com/ link. License: Creative Commons Zero (CC0)
 * FontAwesome by Dave Gandy http://fortawesome.github.io/Font-Awesome/
   Licensed under the GPL, version 2 or later http://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
 * FitVids by Chris Coyier and Paravel | WTFPL Licensed
