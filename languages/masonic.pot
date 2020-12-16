@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Masonic 1.3.4\n"
+"Project-Id-Version: Masonic 1.3.5\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2020-08-17 04:34:21+00:00\n"
+"POT-Creation-Date: 2020-12-16 06:53:39+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -95,8 +95,8 @@ msgstr ""
 msgid "WordPress"
 msgstr ""
 
-#. Author of the plugin/theme
-msgid "ThemeGrill"
+#. Theme Name of the plugin/theme
+msgid "Masonic"
 msgstr ""
 
 #: functions.php:239
@@ -196,10 +196,6 @@ msgstr ""
 
 #: inc/admin/class-masonic-welcome-notice.php:26
 msgid "Get started with Masonic"
-msgstr ""
-
-#. Theme Name of the plugin/theme
-msgid "Masonic"
 msgstr ""
 
 #: inc/admin/class-masonic-welcome-notice.php:54
@@ -381,6 +377,10 @@ msgid ""
 "Also, supports Breadcrumb NavXT plugin. Get free support at "
 "https://themegrill.com/support-forum/ and check the demo at "
 "https://demo.themegrill.com/masonic/"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "ThemeGrill"
 msgstr ""
 
 #. Author URI of the plugin/theme

@@ -41,7 +41,7 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
+= Version 1.3.5 - 2020-12-16 =
 * Fix 	- Drop-down mobile menu not appearing on small devices.
 * Tweak - Update footer credit link with `rel="nofollow"` attributes.
 
