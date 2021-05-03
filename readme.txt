@@ -8,7 +8,11 @@ External resources linked to the theme.
   Licensed under Apache License, version 2.0 http://www.apache.org/licenses/LICENSE-2.0.html
 
 Resources packed within the theme.
-* Images on screenshot is from https://pxhere.com/ link. License: Creative Commons Zero (CC0)
+* Images used in Screenshot. License: Creative Commons Zero (CC0)
+  https://pxhere.com/en/photo/6211
+  https://pxhere.com/en/photo/891866
+  https://pexels.com/photo/street-3452/
+  https://stocksnap.io/photo/soup-broth-F8CED10668
 * FontAwesome by Dave Gandy http://fortawesome.github.io/Font-Awesome/
   Licensed under the GPL, version 2 or later http://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
 * FitVids by Chris Coyier and Paravel | WTFPL Licensed
