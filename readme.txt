@@ -8,7 +8,13 @@ External resources linked to the theme.
   Licensed under Apache License, version 2.0 http://www.apache.org/licenses/LICENSE-2.0.html
 
 Resources packed within the theme.
-* Images on screenshot is from https://pxhere.com/ link. License: Creative Commons Zero (CC0)
+* Images used in the screenshot are licensed under Creative Commons Zero (CC0):
+
+  https://pxhere.com/en/photo/6211
+  https://pxhere.com/en/photo/891866
+  https://pexels.com/photo/street-3452/
+  https://stocksnap.io/photo/soup-broth-F8CED10668
+  
 * FontAwesome by Dave Gandy http://fortawesome.github.io/Font-Awesome/
   Licensed under the GPL, version 2 or later http://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
 * FitVids by Chris Coyier and Paravel | WTFPL Licensed
@@ -43,6 +49,7 @@ and we will include it within the theme from next version update.
 == Changelog ==
 = Version TBD =
 * Feature - Added RTL support.
+* Tweak - Update screenshot image source link.
 
 = Version 1.3.5 - 2020-12-16 =
 * Fix 	- Drop-down mobile menu not appearing on small devices.
