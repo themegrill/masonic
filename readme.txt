@@ -47,7 +47,7 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-= TBD =
+= Version 1.3.7 - 2021-05-17 =
 * Fix - Screenshot image size.
 
 = Version 1.3.6 - 2021-05-07 =
