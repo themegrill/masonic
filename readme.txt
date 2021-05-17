@@ -47,6 +47,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= TBD =
+* Tweak - Update screenshot image.
+
 = Version 1.3.6 - 2021-05-07 =
 * Feature - Added RTL support.
 * Tweak - Update screenshot image source link.
