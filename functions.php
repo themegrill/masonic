@@ -152,7 +152,7 @@ add_action('widgets_init', 'masonic_widgets_init');
 function masonic_scripts() {
    wp_enqueue_style('masonic-style', get_stylesheet_uri());
 
-   wp_enqueue_style('masonic-google-fonts', '//fonts.googleapis.com/css?family=Open+Sans:400,300italic,700');
+   wp_enqueue_style('masonic-google-fonts', '//fonts.googleapis.com/css?family=Open+Sans:400,300italic,700&display=swap');
 
    wp_enqueue_style('masonic-font-awesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.min.css');
 
