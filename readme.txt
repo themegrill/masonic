@@ -47,6 +47,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Enhancement - Added 'font-display: swap' CSS property for fonts to ensure better load performance.
+
 = Version 1.3.7 - 2021-05-17 =
 * Fix - Screenshot image size.
 
