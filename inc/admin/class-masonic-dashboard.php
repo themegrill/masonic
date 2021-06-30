@@ -40,10 +40,16 @@ class Masonic_Dashboard {
 		/* translators: %s: Theme Name. */
 		$theme_page_name = sprintf( esc_html__( '%s Options', 'masonic' ), $theme->Name );
 
-		$page = add_theme_page( $theme_page_name, $theme_page_name, 'edit_theme_options', 'masonic-options', array(
-			$this,
-			'option_page'
-		) );
+		$page = add_theme_page(
+			$theme_page_name,
+			$theme_page_name,
+			'edit_theme_options',
+			'masonic-options',
+			array(
+				$this,
+				'option_page',
+			)
+		);
 
 		add_action( 'admin_print_styles-' . $page, array( $this, 'enqueue_styles' ) );
 	}
@@ -97,7 +103,7 @@ class Masonic_Dashboard {
 						<h3><?php esc_html_e( 'Next Steps', 'masonic' ); ?></h3>
 						<ul>
 							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-media-text">' . esc_html__( 'Documentation', 'masonic' ) . '</a>', esc_url( 'https://docs.themegrill.com/masonic' ) ); ?></li>
-							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-layout">' . esc_html__( 'Starter Demos', 'masonic' ) . '</a>', esc_url( 'https://demo.themegrill.com/masonic-demos' ) ); ?></li>
+							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-layout">' . esc_html__( 'Starter Demos', 'masonic' ) . '</a>', esc_url( 'https://themegrilldemos.com/masonic-demos/' ) ); ?></li>
 						</ul>
 					</div>
 
