@@ -375,8 +375,8 @@ msgid ""
 "and has beautiful masonry layout. Theme has options like primary color, "
 "link color, custom CSS etc. which you can change from Theme Customizer. "
 "Also, supports Breadcrumb NavXT plugin. Get free support at "
-"https://themegrill.com/support-forum/ and check the demo at "
-"https://demo.themegrill.com/masonic/"
+"https://themegrill.com/contact/ and check the demo at "
+"https://themegrilldemos.com/masonic/"
 msgstr ""
 
 #. Author of the plugin/theme
